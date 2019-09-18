@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App3_8</string>
+    <string name="barMaxVal">48</string>
+    <string name="barMinVal">24</string>
+    <string name="loanTextView">Loan Amount</string>
+    <string name="downPayment">Down Payment</string>
+    <string name="noMonths"># of Months</string>
+    <string name="interestRate">Interest Rate</string>
+    <string name="monthsPayment">Payments</string>
+
+</resources>

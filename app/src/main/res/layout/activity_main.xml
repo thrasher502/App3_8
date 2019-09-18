@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="232dp"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="7">
+
+        <EditText
+            android:id="@+id/loanEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/downPaymentEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <EditText
+            android:id="@+id/iREditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <LinearLayout
+            android:id="@+id/monthsBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_column="1"
+            app:layout_gravity="fill_horizontal|top"
+            app:layout_row="3">
+
+            <TextView
+                android:id="@+id/barMinVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="2dp"
+                android:layout_weight="0.25"
+                android:text="@string/barMinVal"
+                android:textAlignment="viewEnd"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="6"
+                android:max="24"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/barMaxVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0.25"
+                android:text="@string/barMaxVal"
+                android:textAlignment="viewStart"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lastLinearLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_column="0"
+            app:layout_gravity="fill_horizontal|fill_vertical"
+            app:layout_row="6">
+
+            <LinearLayout
+                android:id="@+id/titles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/yearHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:text="Year" />
+
+                <TextView
+                    android:id="@+id/outPut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Output" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lastLinearRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_column="1"
+            app:layout_gravity="center|fill_horizontal|fill_vertical"
+            app:layout_row="6">
+
+            <LinearLayout
+                android:id="@+id/yr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="116dp">
+
+                <TextView
+                    android:id="@+id/yr2Header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/yr2TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yr3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/yr3Header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:text="3" />
+
+                <TextView
+                    android:id="@+id/yr3TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yr4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/yr4Header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/yr4TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="TextView" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/downPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/downPayment"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/loanHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loanTextView"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            app:layout_column="0"
+            app:layout_gravity="fill_horizontal|center_vertical|end"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/interestRateHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interestRate"
+            app:layout_column="0"
+            app:layout_gravity="fill_horizontal|center_vertical|end"
+            app:layout_row="2" />
+
+        <TextView
+            android:id="@+id/noMonths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noMonths"
+            app:layout_column="0"
+            app:layout_gravity="fill_horizontal|top|end"
+            app:layout_row="3" />
+
+        <TextView
+            android:id="@+id/monthsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_gravity="fill_horizontal|top"
+            app:layout_row="4" />
+
+        <TextView
+            android:id="@+id/paymentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_gravity="fill_horizontal|top|center_vertical"
+            app:layout_row="5"
+            tools:layout_editor_absoluteX="-111dp"
+            tools:layout_editor_absoluteY="79dp" />
+
+        <TextView
+            android:id="@+id/paymentHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Calculated Payment"
+            app:layout_column="0"
+            app:layout_gravity="fill_horizontal|top|end"
+            app:layout_row="5"
+            tools:layout_editor_absoluteX="-48dp"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <TextView
+            android:id="@+id/loanTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00E5FF"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_gravity="fill_horizontal"
+            app:layout_row="0"
+            tools:layout_editor_absoluteX="-104dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <TextView
+            android:id="@+id/downPaymentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00E5FF"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_gravity="fill_horizontal"
+            app:layout_row="1"
+            tools:layout_editor_absoluteX="-105dp"
+            tools:layout_editor_absoluteY="230dp" />
+
+        <TextView
+            android:id="@+id/iRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00E5FF"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_column="1"
+            app:layout_gravity="fill_horizontal"
+            app:layout_row="2"
+            tools:layout_editor_absoluteX="-96dp"
+            tools:layout_editor_absoluteY="291dp" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
